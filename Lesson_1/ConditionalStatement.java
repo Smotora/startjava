@@ -1,17 +1,16 @@
 public class ConditionalStatement {
 	public static void main (String [] args) {
-
-		int age= 24;
+		int age = 24;
 		if (age > 20) {
 			System.out.println ("Вам более двадцати лет ");
 		}
 
 		int sex = 1;
-		boolean isSex = sex == 1;
-		if (isSex = true) {
+		boolean isMale = true;
+		if (isMale == true) {
 			System.out.println ("Ваш пол - мужской ");
 		}
-		if (isSex = false) {
+		if (!isMale == true) {
 			System.out.println ("Ваш пол - женский ");
 		}
 
@@ -22,13 +21,12 @@ public class ConditionalStatement {
 			System.out.println ("Ваш рост более 1.80 ");
 		}
 
-		String str = "MIKE";
-		int first = str.length ()-str.length ();
-		char firstLetter = str.charAt(first);
-		if (firstLetter == 'M') {
-			System.out.println ("Первая буква имени: " + firstLetter);
-		} else if (firstLetter == 'I') {
-			System.out.println ("Первая буква имени: " + firstLetter);
+		String name = "MIKE";
+		char firstNameLetter = name.charAt(0);
+		if (firstNameLetter == 'M') {
+			System.out.println ("Первая буква имени: " + firstNameLetter);
+		} else if (firstNameLetter == 'I') {
+			System.out.println ("Первая буква имени: " + firstNameLetter);
 		} else {
 			System.out.println ("Первая буква имени не M и не I ");
 		}

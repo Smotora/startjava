@@ -5,7 +5,7 @@ public class Variable {
 		int gpuSeries = 660;
 		long ram = 6144;
 		float cpu = 2.3f;
-		double ind = 5.9;
+		double wsat = 5.9;
 		char hdd = 'C';
 		boolean isLaptop = true;
 
@@ -14,7 +14,7 @@ public class Variable {
 		System.out.println("NVIDEA GeForce GTX " + gpuSeries + "M");
 		System.out.println("RAM:" + ram + " MB");
 		System.out.println("CPU: " + cpu + "GHz");
-		System.out.println("Windows System Assessment Tool: " + ind);
+		System.out.println("Windows System Assessment Tool: " + wsat);
 		System.out.println("One of HDD: " + hdd);
 		System.out.println("Is the computer a laptop? " + isLaptop);
 	}

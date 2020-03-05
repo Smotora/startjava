@@ -9,13 +9,13 @@ public class Variable {
 		char hdd = 'C';
 		boolean isLaptop = true;
 
-				System.out.println("Version Windows: " + win);
-				System.out.println("Intel Core i" + intel);
-				System.out.println("NVIDEA GeForce GTX " + geforce + "M");
-				System.out.println("RAM:" + ram + " MB");
-				System.out.println("CPU: " + cpu + "GHz");
-				System.out.println("Windows System Assessment Tool: " + ind);
-				System.out.println("One of HDD: " + hdd);
-				System.out.println("Is the computer a laptop? " + isLaptop);
+		System.out.println("Version Windows: " + win);
+		System.out.println("Intel Core i" + intel);
+		System.out.println("NVIDEA GeForce GTX " + geforce + "M");
+		System.out.println("RAM:" + ram + " MB");
+		System.out.println("CPU: " + cpu + "GHz");
+		System.out.println("Windows System Assessment Tool: " + ind);
+		System.out.println("One of HDD: " + hdd);
+		System.out.println("Is the computer a laptop? " + isLaptop);
 	}
 }

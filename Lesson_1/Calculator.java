@@ -1,44 +1,44 @@
 import java.util.Scanner;
-public class Calculator{
-	public static void main (String[] args) {
-	Scanner scanA = new Scanner (System.in);
-	double a;
+public class Calculator {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		double a;
 		System.out.println ("Введите первое число: ");
-		while (!scanA.hasNextInt()) {
+		while (!scan.hasNextInt()) {
 			System.out.println ("Введеные данные не являются числом. Повторите ввод первого числа: ");
-			scanA.next();
+			scan.next();
 		}
-	a = scanA.nextDouble();
+		a = scan.nextDouble();
 	
-	
-	Scanner scanB = new Scanner (System.in);
-	double b;
-
+		double b;
 		System.out.println ("Введите второе число: ");
-		while (!scanB.hasNextInt()) {
+		while (!scan.hasNextInt()) {
 			System.out.println ("Введеные данные не являются числом. Повторите ввод второго числа: ");
-			scanB.next();
+			scan.next();
 		}
-	b = scanB.nextDouble();
+		b = scan.nextDouble();
 
-	Scanner scanOper = new Scanner (System.in);
-	System.out.println ("Введите операцию: +, -, *, /");
-	while (!scanOper.hasNext("[-+*/]")) {
+		System.out.println ("Введите операцию: +, -, *, /, ^, % ");
+		while (!scan.hasNext("[-+*/^%]")) {
 			System.out.println ("Введеные данные не являются арифметической операцией. Повторите ввод операции: ");
-			scanOper.next();
+			scan.next();
 		}
-	char oper = scanOper.next().charAt(0);
+		char oper = scan.next().charAt(0);
 
-	if (oper == '+') {
-		System.out.println ( "Сумма введённых чисел: " + (a + b));
-	} else if (oper == '-') {
-		System.out.println ( "Разность введённых чисел: " + (a - b));
-	} else if (oper == '*') {
-		System.out.println ( "Произведение введённых чисел: " + (a * b));
-	} else if (oper == '/' & b==0) {
-		System.out.println ("Деление на 0 запрещено!");
-	} else {
-		System.out.println ("Частное введённых чисел: " + (a / b));
+		if (oper == '+') {
+			System.out.println ( "Сумма введённых чисел: " + (a + b));
+		} else if (oper == '-') {
+			System.out.println ( "Разность введённых чисел: " + (a - b));
+		} else if (oper == '*') {
+			System.out.println ( "Произведение введённых чисел: " + (a * b));
+		} else if (oper == '/' & b==0) {
+			System.out.println ("Деление на 0 запрещено!");
+		} else if (oper == '/') {
+			System.out.println ("Частное введённых чисел: " + (a / b));
+		} else if (oper == '^') {
+			System.out.println ("Первое число в степени второго числа: " + Math.pow(a, b));
+		} else {
+			System.out.println ("Остаток от деления первого числа на второе: " + (a % b));
 		}
 	}
 }

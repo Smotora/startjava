@@ -1,17 +1,16 @@
 import java.util.Scanner;
+
 public class Calculator {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner (System.in);
 		System.out.println("Введите первое число: ");
-		
 		while (!scan.hasNextDouble()) {
 			System.out.println("Введеные данные не являются числом. Повторите ввод первого числа: ");
 			scan.next();
 		}
-		double a= scan.nextDouble();
+		double a = scan.nextDouble();
 	
 		System.out.println("Введите операцию: +, -, *, /, ^, % ");
-		
 		while (!scan.hasNext("[-+*/^%]")) {
 			System.out.println("Введеные данные не являются арифметической операцией. Повторите ввод операции: ");
 			scan.next();
@@ -23,7 +22,7 @@ public class Calculator {
 			System.out.println("Введеные данные не являются числом. Повторите ввод второго числа: ");
 			scan.next();
 		}
-		double b= scan.nextDouble();
+		double b = scan.nextDouble();
 		
 		if (operator == '+') {
 			System.out.println( "Сумма введённых чисел: " + (a + b));
@@ -39,7 +38,7 @@ public class Calculator {
 			double result = 1.0;
 			double i = 1.0;
 			while (i <= b) {
-				result = a * result;
+				result *= a;
 				i++;
 			}
 			System.out.println("Первое число в степени второго числа: " + result);

@@ -1,4 +1,4 @@
-public class Person{
+class Person {
 	char sex = 'F';
 	String name = "Svetlana";
 	float height = 1.7f;
@@ -10,14 +10,16 @@ public class Person{
 	}
 
 	void sit() {
+		System.out.println ("Я могу сидеть");
 	}
 
-	void run() {
-		System.out.println ("Я могу бегать");
+	int run() {
+		int distance = 5;
+		return distance;
 	}
 
 	String speak() {
-		return "Я говорю";
+		return "Привет! Меня зовут Светлана.";
 	}
 
 	boolean learnJava() {

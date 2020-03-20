@@ -7,6 +7,7 @@ public class Wolf {
 
     public char getSex() {
         return sex;
+
     }
     public void setSex(char sex) {
         if (sex != 'M' & sex != 'F') {
@@ -19,6 +20,7 @@ public class Wolf {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         if (name == "") {
             System.out.println("Не введена кличка");
@@ -30,6 +32,7 @@ public class Wolf {
     public float getWeight() {
         return weight;
     }
+
     public void setWeight(float weight) {
         if (weight <= 0) {
             System.out.println("Некорректный вес");
@@ -41,6 +44,7 @@ public class Wolf {
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         if (age > 8) {
             System.out.println("Некорректный возраст");
@@ -52,6 +56,7 @@ public class Wolf {
     public String getColor() {
         return color;
     }
+    
     public void setColor(String color) {
         if (color == "") {
             System.out.println("Не введен цвет");

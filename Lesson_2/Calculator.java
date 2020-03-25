@@ -39,34 +39,34 @@ public class Calculator {
 		return b;
 	}
 
-	public double total() {
+	public double calculate() {
 		double totalResult = 0;
 		switch (operator)
 			{
-				case '+' :
-					totalResult = (a + b);
-					break;
-				case '-' :
-					totalResult = (a - b);
-					break;
-				case '*' :
-					totalResult = (a * b);;
-					break;
-				case '/' :
-					totalResult = (a / b);
-					break;
-				case '^' :
-					double result = 1.0;
-					double i = 1.0;
-					while (i <= b) {
-						result *= a;
-						i++;
-					}
-					totalResult = (a / b);
-					break;
-				case '%' :
-					totalResult = (a % b);
-					break;
+			case '+' :
+				totalResult = (a + b);
+				break;
+			case '-' :
+				totalResult = (a - b);
+				break;
+			case '*' :
+				totalResult = (a * b);;
+				break;
+			case '/' :
+				totalResult = (a / b);
+				break;
+			case '^' :
+				double result = 1.0;
+				double i = 1.0;
+				while (i <= b) {
+					result *= a;
+					i++;
+				}
+				totalResult = (a / b);
+				break;
+			case '%' :
+				totalResult = (a % b);
+				break;
 			}
 		return totalResult;
 	}

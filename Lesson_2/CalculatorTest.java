@@ -2,18 +2,33 @@ import java.util.Scanner;
 
 public class CalculatorTest {
 	public static void main(String[] args) {
+		String playAgain = null;
 		Scanner scan = new Scanner(System.in);
-		Calculator calculatorTest = new Calculator();
+		do {
+		Calculator calc = new Calculator();
 		
 		System.out.println("Введите первое число: ");
-		calculatorTest.getA();
+		calc.getA();
 		
 		System.out.println("Введите операцию: ");
-		calculatorTest.getOperator();
+		calc.getOperator();
 
 		System.out.println("Введите второе число:  ");
-		calculatorTest.getB();
+		calc.getB();
 		
-		System.out.println("Результат: " + calculatorTest.total());
+		System.out.println("Результат: " + calc.calculate());
+		System.out.println("Хотите продолжить? [да/нет]: ");
+		playAgain = scan.next();
+		} while (playAgain.equals("да"));
+		
+		while (!playAgain.equals("да")) {
+			if (playAgain.equals("нет")) {
+				System.out.println("До встречи!");
+				break;
+			} else {
+			System.out.println("Введены неверные данные. Хотите продолжить? [да/нет]: ");
+			playAgain = scan.next();
+			}
+		}
 	}
 }

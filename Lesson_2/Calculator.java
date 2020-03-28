@@ -5,38 +5,29 @@ public class Calculator {
 	private double a;
 	private char operator;
 	private double b;
-
+	
 	public double getA() {
-		if (scan.hasNextDouble()) {
-			a = (scan.nextDouble());
-		} else {
+		while (!scan.hasNextDouble()) {
 			System.out.println("Введеные данные не являются числом. Повторите ввод первого числа: ");
 			scan.next();
-			a = getA();
 		}
-		return a;
+		return a = scan.nextDouble();
 	}
 
 	public char getOperator() {
-		if (scan.hasNext("[-+*/^%]")) {
-			operator = scan.next().charAt(0);
-		} else {
-			System.out.println("Введеные данные не являются операцией. Повторите ввод операции: ");
+		while (!scan.hasNext("[-+*/^%]")) {
+			System.out.println("Введеные данные не являются арифметической операцией. Повторите ввод операции: ");
 			scan.next();
-			operator = getOperator();
 		}
-		return operator;
+		return operator = scan.next().charAt(0);
 	}
 
 	public double getB() {
-		if (scan.hasNextDouble()) {
-			b = (scan.nextDouble());
-		} else {
-			System.out.println("Введеные данные не являются числом. Повторите ввод второго числа: ");
+		while (!scan.hasNextDouble()) {
+			System.out.println("Введеные данные не являются числом. Повторите ввод первого числа: ");
 			scan.next();
-			b = getB();
-		}
-		return b;
+		} 
+		return b = scan.nextDouble();
 	}
 
 	public double calculate() {

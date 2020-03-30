@@ -21,12 +21,12 @@ public class CalculatorTest {
 			againCalc = scan.next();
 			do {
 				if (againCalc.equals("нет")) {
-				System.out.println("До встречи!");
-				break;
-			} else {
-				System.out.println("Введены неверные данные. Хотите продолжить? [да/нет]: ");
-				againCalc = scan.next();
-			}
+					System.out.println("До встречи!");
+					break;
+				} else {
+					System.out.println("Введены неверные данные. Хотите продолжить? [да/нет]: ");
+					againCalc = scan.next();
+				}
 			} while (!againCalc.equals("да"));
 		} while (againCalc.equals("да"));
 	}

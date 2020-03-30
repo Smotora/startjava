@@ -7,8 +7,8 @@ public class Wolf {
 
     public char getSex() {
         return sex;
-
     }
+    
     public void setSex(char sex) {
         if (sex != 'M' & sex != 'F') {
             System.out.println("Некорректный пол");

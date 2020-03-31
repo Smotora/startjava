@@ -17,17 +17,19 @@ public class CalculatorTest {
 			calc.getB();
 			
 			System.out.println("Результат: " + calc.calculate());
-			System.out.println("Хотите продолжить? [да/нет]: ");
+			System.out.println("Хотите продолжить? [yes/no]: ");
 			againCalc = scan.next();
+			if (againCalc.equals("yes"))
+				continue;
 			do {
-				if (againCalc.equals("нет")) {
+				if (againCalc.equals("no")) {
 					System.out.println("До встречи!");
 					break;
 				} else {
-					System.out.println("Введены неверные данные. Хотите продолжить? [да/нет]: ");
+					System.out.println("Введены неверные данные. Хотите продолжить? [yes/no]: ");
 					againCalc = scan.next();
 				}
-			} while (!againCalc.equals("да"));
-		} while (againCalc.equals("да"));
+			} while (!againCalc.equals("yes"));
+		} while (againCalc.equals("yes"));
 	}
 }

@@ -19,17 +19,15 @@ public class CalculatorTest {
 			System.out.println("Результат: " + calc.calculate());
 			System.out.println("Хотите продолжить? [yes/no]: ");
 			againCalc = scan.next();
-			if (againCalc.equals("yes"))
-				continue;
 			do {
 				if (againCalc.equals("no")) {
-					System.out.println("До встречи!");
 					break;
-				} else {
-					System.out.println("Введены неверные данные. Хотите продолжить? [yes/no]: ");
-					againCalc = scan.next();
-				}
+				} else if (againCalc.equals("yes"))
+					continue; 
+				System.out.println("Введены неверные данные. Хотите продолжить? [yes/no]: ");
+				againCalc = scan.next();
 			} while (!againCalc.equals("yes"));
 		} while (againCalc.equals("yes"));
+		System.out.println("До встречи!");
 	}
 }

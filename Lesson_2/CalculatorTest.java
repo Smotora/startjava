@@ -20,12 +20,12 @@ public class CalculatorTest {
 			System.out.println("Хотите продолжить? [yes/no]: ");
 			againCalc = scan.next();
 			do {
-				if (againCalc.equals("no")) {
+				if (againCalc.equals("no") | againCalc.equals("yes")) {
 					break;
-				} else if (againCalc.equals("yes"))
-					continue; 
+				} else {
 				System.out.println("Введены неверные данные. Хотите продолжить? [yes/no]: ");
 				againCalc = scan.next();
+				}
 			} while (!againCalc.equals("yes"));
 		} while (againCalc.equals("yes"));
 		System.out.println("До встречи!");

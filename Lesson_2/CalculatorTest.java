@@ -24,6 +24,6 @@ public class CalculatorTest {
 				againCalc = scan.next();
 			}
 		} while (againCalc.equals("yes"));
-			System.out.println("До встречи!");
+		System.out.println("До встречи!");
 	}
 }

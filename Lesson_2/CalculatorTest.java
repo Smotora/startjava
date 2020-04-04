@@ -13,21 +13,19 @@ public class CalculatorTest {
 			System.out.println("Введите операцию: ");
 			calc.getOperator();
 			
-			System.out.println("Введите второе число:  ");
+			System.out.println("Введите второе число: ");
 			calc.getB();
 			
 			System.out.println("Результат: " + calc.calculate());
 			System.out.println("Хотите продолжить? [yes/no]: ");
 			againCalc = scan.next();
-			do {
-				if (againCalc.equals("no") | againCalc.equals("yes")) {
-					break;
-				} else {
+			while (!againCalc.equals("no") & !againCalc.equals("yes")) {
 				System.out.println("Введены неверные данные. Хотите продолжить? [yes/no]: ");
 				againCalc = scan.next();
-				}
-			} while (!againCalc.equals("yes"));
+			}
 		} while (againCalc.equals("yes"));
-		System.out.println("До встречи!");
+		if (againCalc.equals("no")) {
+			System.out.println("До встречи!");
+		}
 	}
 }

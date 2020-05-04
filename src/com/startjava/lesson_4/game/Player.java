@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Player {
     private int number;
     private String name;
-    private int[] tryingNumbers = new int[10];
-    private int count;
+    private int[] enteredNumbers = new int[10];
+    private int attempt;
 
     public Player(String name) {
         this.name = name;
@@ -16,27 +16,23 @@ public class Player {
         return name;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
     public int[] getTryingNumbers() {
-        return tryingNumbers;
+        return enteredNumbers;
     }
 
-    public int getCount() {
-        return count;
+    public int getAttempt() {
+        return attempt;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setAttempt(int attempt) {
+        this.attempt = attempt;
     }
 
-    public void nextNumber (int number, int index) {
-        tryingNumbers[index] = number;
+    public void setNumber(int number, int index) {
+        enteredNumbers[index] = number;
     }
 
-    public void playNew(int index) {
-        Arrays.fill(tryingNumbers, 0, index, 0);
+    public void clear(int index) {
+        Arrays.fill(enteredNumbers, 0, index, 0);
     }
 }

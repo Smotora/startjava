@@ -3,7 +3,6 @@ package com.startjava.lesson_4.game;
 import java.util.Arrays;
 
 public class Player {
-    private int number;
     private String name;
     private int[] enteredNumbers = new int[10];
     private int attempt;
@@ -16,8 +15,12 @@ public class Player {
         return name;
     }
 
-    public int[] getTryingNumbers() {
-        return enteredNumbers;
+    public int getNumbers() {
+        return enteredNumbers[attempt - 1];
+    }
+
+    public int [] getEnteredNumbers() {
+        return Arrays.copyOf(enteredNumbers, attempt);
     }
 
     public int getAttempt() {

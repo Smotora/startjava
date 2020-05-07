@@ -15,11 +15,11 @@ public class Player {
         return name;
     }
 
-    public int getNumbers() {
+    public int getNumber() {
         return enteredNumbers[attempt - 1];
     }
 
-    public int [] getEnteredNumbers() {
+    public int[] getEnteredNumbers() {
         return Arrays.copyOf(enteredNumbers, attempt);
     }
 

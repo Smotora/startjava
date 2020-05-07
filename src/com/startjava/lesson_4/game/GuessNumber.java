@@ -3,7 +3,7 @@ package com.startjava.lesson_4.game;
 import java.util.Scanner;
 
 public class GuessNumber {
-    Scanner scan = new Scanner (System.in);
+    Scanner scan = new Scanner(System.in);
     private Player playerOne;
     private Player playerTwo;
     private int hiddenNumber = (int) (Math.random() * 101);
@@ -22,23 +22,18 @@ public class GuessNumber {
             }
             if (i == 9) {
                 System.out.println(playerOne.getName() + ", попытки кончились!");
-                showEnteredNumbers(playerOne, playerOne.getAttempt());
             }
             if (makeMove(playerTwo, i)) {
                 return;
             }
             if (i == 9) {
                 System.out.println(playerTwo.getName() + ", попытки кончились!");
-                showEnteredNumbers(playerTwo, playerTwo.getAttempt());
             }
         }
+        showEnteredNumbers(playerOne, playerOne.getAttempt());
+        showEnteredNumbers(playerTwo, playerTwo.getAttempt());
         playerOne.clear(playerOne.getAttempt());
         playerTwo.clear(playerTwo.getAttempt());
-    }
-
-    private void enterNumber(Player player, int index) {
-        System.out.println(player.getName() + ", Ваш ход. Введите число: ");
-        player.setNumber(scan.nextInt(), index);
     }
 
     private boolean makeMove(Player player, int index) {
@@ -47,8 +42,13 @@ public class GuessNumber {
         return compareNumber(player, index);
     }
 
+    private void enterNumber(Player player, int index) {
+        System.out.println(player.getName() + ", Ваш ход. Введите число: ");
+        player.setNumber(scan.nextInt(), index);
+    }
+
     private boolean compareNumber(Player player, int index) {
-        int num = player.getNumbers();
+        int num = player.getNumber();
         if (num != hiddenNumber) {
             if (num > hiddenNumber) {
                 System.out.println("Введенное вами число больше загаданого компьютером");
